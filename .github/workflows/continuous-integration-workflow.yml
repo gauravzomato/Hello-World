@@ -2,8 +2,6 @@
 name: Greet Everyone
 # This workflow is triggered on pushes to the repository.
 on: [push]
-branches:
-  - master
 
 jobs:
   build:
@@ -23,11 +21,6 @@ jobs:
         run: echo 'The time was ${{ steps.hello.outputs.time }}.'
       #- name: Badge Status
       #- run: https://github.com/gauravzomato/Hello-World/.github/workflows/continuous-integration-workflow.yml/badge.svg
-
-  build:
-    name: Linting
-    runs-on: ubuntu-latest
-    steps:
       - name: setup ESLint
         uses: uses = "stefanoeb/eslint-action@master"
         with:
